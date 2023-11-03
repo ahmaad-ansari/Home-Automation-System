@@ -19,6 +19,28 @@ This repository contains the code for a home automation system designed to contr
 - `db.sqlite3`: The SQLite database file containing the application's persistent data.
 - `manage.py`: The Django command-line utility for administrative tasks.
 
+## Wiring Instructions
+
+To use the home automation system, you'll need to connect the LED and LDR (Light Dependent Resistor) to your Raspberry Pi's GPIO pins. Follow these instructions to properly wire your components:
+
+### LED Connection (GPIO 17):
+
+1. Connect the longer lead (anode) of the LED to GPIO pin 17 (physical pin 11) on the Raspberry Pi.
+2. Connect the shorter lead (cathode) of the LED to a current-limiting resistor.
+3. Connect the other end of the resistor to one of the ground (GND) pins on the Raspberry Pi.
+   
+   - **Note:** Ensure that the LED is connected with the correct polarity (anode to GPIO 17 and cathode to GND) to avoid damaging the LED.
+
+### LDR Connection (GPIO 4):
+
+1. Connect one leg of the LDR to GPIO pin 4 (physical pin 7) on the Raspberry Pi.
+2. Connect the other leg of the LDR to one of the 3.3V pins on the Raspberry Pi.
+3. Place a pull-down resistor (10k ohms) between the same leg connected to GPIO 4 and a ground (GND) pin on the Raspberry Pi.
+
+   - **Note:** The LDR is used to detect ambient light levels. The pull-down resistor ensures stable readings when the LDR is not exposed to light.
+
+After completing these wiring connections, you can proceed with setting up and running the home automation system as described below.
+
 ## How to Execute the Code
 
 ### Prerequisites
