@@ -71,6 +71,12 @@ Here you can provide screenshots of your web interface for the light control das
 <img style="height:400px" src="https://github.com/ahmaad-ansari/SOFE4610U-Assignment-3/assets/88805493/20431deb-c280-4742-acfa-63835a145307" alt="">
 <img style="height:400px" src="https://github.com/ahmaad-ansari/SOFE4610U-Assignment-3/assets/88805493/e9800e7e-8bef-4fcb-af59-15a41a8ba4ed" alt="">
 
+## Sequence Diagram
+Here is the sequence diagram illustrating the flow of operations from the user interaction to the database update and response back to the user for a simple LED toggle:
+
+<img style="height:400px" src="https://github.com/ahmaad-ansari/SOFE4610U-Assignment-3/assets/88805493/3fd5cf51-c917-4fad-8ad9-4bdb4e82cf00" alt="">
+
+
 ## Additional Notes
 
 - The GPIO control code is tailored for the Raspberry Pi. Adaptations may be required for other platforms.
