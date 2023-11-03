@@ -33,8 +33,8 @@ This repository contains the code for a home automation system designed to contr
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/yourrepositoryname.git
-    cd yourrepositoryname
+    git clone https://github.com/ahmaad-ansari/SOFE4610U-Assignment-3.git
+    cd SOFE4610U-Assignment-3
     ```
 
 2. Run database migrations:
@@ -75,6 +75,11 @@ Here you can provide screenshots of your web interface for the light control das
 Here is the sequence diagram illustrating the flow of operations from the user interaction to the database update and response back to the user for a simple LED toggle:
 
 <img style="height:400px" src="https://github.com/ahmaad-ansari/SOFE4610U-Assignment-3/assets/88805493/3fd5cf51-c917-4fad-8ad9-4bdb4e82cf00" alt="">
+
+## Demo Video
+
+https://github.com/ahmaad-ansari/SOFE4610U-Assignment-3/assets/88805493/4bedd925-6d8a-4b2b-8182-f71deb28c082
+
 
 
 ## Additional Notes
