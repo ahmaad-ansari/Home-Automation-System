@@ -1,24 +1,16 @@
-"""myhomeautomation URL Configuration
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/1.11/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  url(r'^$', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  url(r'^$', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.conf.urls import url, include
-    2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
-"""
+# Import required modules and views
 from django.conf.urls import url, include
 from django.contrib import admin
 from lightcontrol import views as lightcontrol_views
 
+# Define URL patterns for your project
 urlpatterns = [
+    # URL for the Django admin site
     url(r'^admin/', admin.site.urls),
+    
+    # Include the URL patterns from the 'lightcontrol' app
     url(r'^lightcontrol/', include('lightcontrol.urls')),
-    url(r'^$', lightcontrol_views.dashboard, name='home'),  # This line maps the root URL to your dashboard view.
+    
+    # Map the root URL to the 'dashboard' view from the 'lightcontrol' app
+    url(r'^$', lightcontrol_views.dashboard, name='home'),
 ]

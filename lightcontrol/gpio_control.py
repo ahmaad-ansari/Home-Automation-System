@@ -9,8 +9,11 @@ GPIO.setup(LDR_PIN, GPIO.IN)
 GPIO.setup(LED_PIN, GPIO.OUT)
 
 def toggle_led():
-    setting = Setting.objects.first()  # Ensure there's always one Setting instance
-    if setting and not setting.auto_mode:  # Toggle only if auto mode is off
+    # Get the first Setting instance from the database
+    setting = Setting.objects.first()
+    
+    # Check if a Setting instance exists and auto_mode is off
+    if setting and not setting.auto_mode:
         current_state = GPIO.input(LED_PIN)
         new_state = not current_state
         GPIO.output(LED_PIN, new_state)
@@ -21,10 +24,14 @@ def toggle_led():
     return setting.led_state if setting else None
 
 def get_led_state():
-    setting = Setting.objects.first()  # Ensure there's always one Setting instance
+    # Get the first Setting instance from the database
+    setting = Setting.objects.first()
+    
     if setting:
         current_state = GPIO.input(LED_PIN)
-        if current_state != setting.led_state:  # Sync the hardware state with the database
+        
+        # Check if the hardware state differs from the database state
+        if current_state != setting.led_state:
             setting.led_state = current_state
             setting.save()
         return current_state
@@ -36,7 +43,9 @@ def read_ldr():
 
 # Add this function to your gpio_control.py
 def control_led_with_ldr():
-    setting = Setting.objects.first()  # Ensure there's always one Setting instance
+    # Get the first Setting instance from the database
+    setting = Setting.objects.first()
+    
     if setting and setting.auto_mode:
         # If the LDR output is LOW (0), it means it's dark, and the LED should be ON
         led_on = read_ldr()  # This will be True when it's dark, and False when it's light

@@ -1,5 +1,3 @@
-# views.py
-
 from django.shortcuts import render, redirect
 from django.http import JsonResponse
 from .gpio_control import toggle_led, get_led_state, control_led_with_ldr
@@ -61,6 +59,7 @@ def control_led_with_ldr_view(request):
         return JsonResponse({'led_state': setting.led_state})
     else:
         return JsonResponse({'error': 'Setting not found'}, status=404)
+
 def auto_mode_state_view(request):
     # Return the Auto Mode state as JSON
     setting = Setting.objects.first()
