@@ -33,8 +33,8 @@ This repository contains the code for a home automation system designed to contr
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/ahmaad-ansari/SOFE4610U-Assignment-3.git
-    cd SOFE4610U-Assignment-3
+    git clone https://github.com/yourusername/yourrepositoryname.git
+    cd yourrepositoryname
     ```
 
 2. Run database migrations:
@@ -43,7 +43,6 @@ This repository contains the code for a home automation system designed to contr
     python3 manage.py makemigrations lightcontrol
     python3 manage.py migrate
     ```
-
 
 ### Running the Development Server
 
@@ -63,6 +62,14 @@ This repository contains the code for a home automation system designed to contr
 
 - Use the web interface to toggle the LED state or switch Auto Mode on/off.
 - When Auto Mode is active, the LED is controlled automatically based on LDR input.
+
+## Webserver Screenshots
+
+Here you can provide screenshots of your web interface for the light control dashboard. This can help users to understand what the interface looks like and how it operates.
+
+<img style="height:400px" src="https://github.com/ahmaad-ansari/SOFE4610U-Assignment-3/assets/88805493/69e71ba7-f723-4ac0-92fd-817c9d8e7ba6" alt="">
+<img style="height:400px" src="https://github.com/ahmaad-ansari/SOFE4610U-Assignment-3/assets/88805493/20431deb-c280-4742-acfa-63835a145307" alt="">
+<img style="height:400px" src="https://github.com/ahmaad-ansari/SOFE4610U-Assignment-3/assets/88805493/e9800e7e-8bef-4fcb-af59-15a41a8ba4ed" alt="">
 
 ## Additional Notes
 
